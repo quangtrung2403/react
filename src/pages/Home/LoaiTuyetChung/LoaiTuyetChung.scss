@@ -1,0 +1,41 @@
+.dangerous-kind {
+	margin-top: 55px;
+	background-color: #da2a1c;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	padding: 24px;
+
+	.title-content {
+		font-size: 50px;
+		color: white;
+	}
+
+	.content-detail {
+		width: 100%;
+		padding: 40px 0px;
+	}
+
+	.content-info {
+		height: 130px;
+		margin: 2px;
+		-webkit-box-flex: 1;
+		flex: 1;
+		min-width: 240px;
+		background: rgb(173, 24, 13);
+		width: 100%;
+		padding: 20px;
+		display: flex;
+		justify-content: space-between;
+
+		&__heading {
+			font-weight: 400;
+			font-size: 16px;
+			margin-top: -2px;
+		}
+
+		&__percent {
+			font-size: 36px;
+		}
+	}
+}

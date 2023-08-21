@@ -1,0 +1,138 @@
+.map-sidebar {
+	background-color: rgba(35, 55, 75, 0.9);
+	color: #fff;
+	padding: 4px 10px;
+	font-family: monospace;
+	z-index: 8;
+	position: absolute;
+	border-radius: 4px;
+	right: 125px;
+	bottom: 10px;
+}
+
+.mapboxgl-popup-content p {
+	margin-bottom: 0.25rem;
+	font-size: 14px;
+}
+
+.mapboxgl-popup-content h4 {
+	margin-bottom: 0;
+	font-size: calc(1.275rem);
+}
+
+.mapboxgl-ctrl-scale {
+	height: 30px;
+	padding: 5px;
+	border: 1px solid #000;
+	min-width: 100px;
+	background-color: #fff;
+	border-radius: 5px;
+	font-size: 14.5px;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl {
+	border-radius: 4px;
+
+	.suggestions-wrapper ul {
+		list-style-type: none;
+		background-color: #fff;
+		border-radius: 4px;
+		left: 0;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		width: 100%;
+		top: calc(100% + 6px);
+		z-index: 20;
+		overflow: hidden;
+		font-size: 15px;
+
+		li {
+			padding: 8px 12.5px;
+			text-align: start;
+		}
+	}
+}
+
+.mapboxgl-ctrl-geocoder--suggestion-title {
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+.mapboxgl-ctrl-geocoder .suggestions>li:hover {
+	background-color: #ccc;
+}
+
+.mapboxgl-ctrl-geocoder--powered-by {
+	display: none !important;
+}
+
+.mapboxgl-ctrl-geocoder .suggestions>li>a {
+	color: #404040;
+	background-color: #f3f3f3;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+@media screen and (min-width: 640px) {
+	.mapboxgl-ctrl-geocoder--icon-search {
+		left: 7px;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+	}
+
+	.mapboxgl-ctrl-geocoder--icon {
+		top: 8px;
+	}
+
+	.mapboxgl-ctrl-geocoder--input {
+		height: 36px;
+		padding: 6px 35px;
+	}
+
+	.mapboxgl-ctrl-geocoder--icon-close {
+		width: 16px;
+		height: 16px;
+		margin-top: 3px;
+		margin-right: 0;
+	}
+}
+
+.mapboxgl-ctrl-geocoder--icon {
+	display: inline-block;
+	position: absolute;
+	vertical-align: middle;
+	fill: #757575;
+	top: 15px;
+	right: 15px;
+}
+
+.mapboxgl-ctrl-geocoder--icon-loading>path[fill="#333"] {
+	display: none;
+}
+
+.mapboxgl-ctrl-geocoder--input {
+	font: inherit;
+	width: 300px;
+	border: 0;
+	margin: 0;
+	height: 50px;
+	color: #404040;
+	color: rgba(0, 0, 0, 0.75);
+	padding: 6px 35px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 15px;
+	outline: none;
+	border: none;
+}
+
+.button-map {
+	position: absolute;
+	z-index: 5;
+}
+

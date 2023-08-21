@@ -1,0 +1,104 @@
+.special {
+	background: rgb(255, 251, 247);
+	padding: 24px;
+
+	&__title {
+		font-size: 16px;
+		color: #000;
+		padding-bottom: 16px;
+		text-align: left;
+		text-transform: uppercase;
+	}
+}
+
+@mixin tooltip {
+	content: attr(data-tooltip);
+	background-color: #555;
+	pointer-events: none;
+	position: absolute;
+	top: 40px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	display: none;
+	font-size: 13px;
+}
+
+.text-note {
+	color: #fff;
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	font-size: 0.875rem;
+	border-radius: 50%;
+	margin-left: 8px;
+	right: 10px;
+
+	p,
+	div {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 10;
+	}
+
+	p[data-tooltip]::before {
+		@include tooltip();
+		width: 450px;
+		right: -80px;
+	}
+
+	p[data-tooltip]:hover::before,
+	div[data-tooltip]:hover::before {
+		opacity: 0.8;
+		display: block;
+	}
+
+	div[data-tooltip]::before {
+		@include tooltip();
+		width: 450px;
+		right: -30px;
+	}
+}
+
+
+@media screen and (max-width: 576px) {
+
+	p[data-tooltip]::before,
+	div[data-tooltip]::before {
+		width: 350px !important;
+		padding: 10px 15px;
+	}
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+	p[data-tooltip]::before,
+	div[data-tooltip]::before {
+		width: 270px !important;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 928px) {
+
+	p[data-tooltip]::before,
+	div[data-tooltip]::before {
+		width: 265px !important;
+	}
+}
+
+@media screen and (min-width: 929px) and (max-width: 1120px) {
+
+	p[data-tooltip]::before,
+	div[data-tooltip]::before {
+		width: 230px !important;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+
+	p[data-tooltip]::before,
+	div[data-tooltip]::before {
+		width: 350px !important;
+	}
+}
